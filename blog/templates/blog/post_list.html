@@ -1,11 +1,18 @@
-<div>
-    <h1><a href="/">Sandra's blog</a></h1>
-</div>
-
-{% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
-        <p>{{ post.text|linebreaksbr }}</p>
+<html>
+    <head>
+        <title>Little Donut's blog</title>
+    </head>
+<body>
+  <div>
+      <h1><a href="/">Little Donut's blog</a></h1>
     </div>
-{% endfor %}
+
+    {% for post in posts %}
+      <div>
+          <p>published: {{ post.published_date }}</p>
+          <h2><a href="">{{ post.title }}</a></h2>
+          <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+        {% endfor %}
+  </body>
+</html>
