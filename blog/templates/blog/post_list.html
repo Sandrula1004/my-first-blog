@@ -6,15 +6,12 @@
     <div>
       <h1><a href="/">Little Donut's blog<a/></h1>
     </div>
-    <div>
-      <p>published: 2.07.2019</p>
-      <h2><a href="">My first post</a></h2>
-      <p>To jest moj pierwszy wpis na blogu bla bla bla bla bla bal abl balablablabl abalbalblablaba lablab</p>
-    </div>
-    <div>
-      <p>published: 3.07.2019</p>
-      <h2><a href="">My second post</a></h2>
-      <p>Co tam misiaczku? :D :* </p>
-    </div>
+        {% for post in posts %}
+          <div>
+            <p>published: {{post.published_date }}</p>
+            <h2><a href="">{{post.title}}</a></h2>
+            <p>{{post.text|linebreaksbr}}</p>
+          </div>
+    {% endfor %}
   </body>
 </html>
